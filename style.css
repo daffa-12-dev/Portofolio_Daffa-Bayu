@@ -1,0 +1,427 @@
+body {
+    background-color: #000;
+    color: #00FFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Media Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #00FFFF;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #25b6ff;
+}
+
+header {
+    background-color: #000; /* Latar belakang header */
+    padding: 20px 0;
+    position: fixed; /* Header tetap berada di atas */
+    top: 0; /* Posisi di bagian atas halaman */
+    width: 100%; /* Pastikan header memenuhi lebar layar */
+    z-index: 1000; /* Supaya tetap di atas elemen lain */
+    box-shadow: 0 2px 20px rgba(43, 220, 243, 0.5); /* Tambahkan bayangan untuk efek elegan */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Posisi elemen di kiri dan kanan */
+    align-items: center; /* Vertikal rata tengah */
+    max-width: 1200px;
+    margin: 0 auto; /* Pusatkan container di tengah halaman */
+    padding: 0 20px; /* Tambahkan padding untuk margin kiri-kanan */
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: 0; /* Pastikan margin dihapus */
+}
+
+.logo i {
+    margin-right: 10px; /* Tambahkan jarak kecil antara ikon dan teks */
+}
+
+nav {
+    display: flex;
+    gap: 20px; /* Jarak antar tautan */
+}
+
+nav a {
+    color: #00FFFF;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #25b6ff;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 75px;
+    gap: 0px;
+}
+
+.profile-photo {
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #00FFFF;
+    object-fit: cover;
+}
+
+.profile-text {
+    text-align: left;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #000;
+    color: #ffffff;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -30px;
+}
+
+.welcome {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00FFFF;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3em;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    animation: typing 3s steps(40, end);
+}
+
+.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero h3 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 1.2em;
+    margin: 20px 0 30px;
+}
+
+.highlight {
+    color: #9ad6f4;
+    font-weight: bold;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Animasi */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #00FFFF;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #25b6ff;
+    transform: scale(1.1);
+}
+
+.about {
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.about-box {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #00FFFF;
+    box-shadow: 0 0 20px #00FFFF, 0 0 40px #00FFFF;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.skills, .projects, .contact {
+    padding: 150px 20px;
+    text-align: center;
+}
+
+.skills h2, .projects h2, .contact h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.skills .skill-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.skills .skill-item i {
+    font-size: 6em;
+    color: #00FFFF;
+}
+
+.skills .skill-item:hover {
+    background-color: #00FFFF;
+    color: #000;
+}
+
+/* Tooltip Style */
+.skills .skill-item i::after {
+    content: "Java\A Script"; /* Memisahkan teks menjadi dua baris */
+    content: attr(data-tooltip); /* Ambil teks dari atribut data-tooltip */
+    position: absolute;
+    top: 50%; /* Tampilkan tepat di atas ikon */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00FFFF;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    font-size: 0.16em;
+    font-weight: bold;
+    opacity: 0; 
+    visibility: hidden;
+    z-index: 10;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Show Tooltip on Hover */
+.skills .skill-item i:hover::after {
+    opacity: 1;
+    visibility: visible;
+    font-size:0.16em; /*Saat Menekan hover Tek tulisan menonjol*/
+}
+
+/* Atur ukuran tooltip agar tidak terlalu besar */
+.skills .skill-item i::after {
+    max-width: 120px; /* Batas maksimal lebar tooltip */
+    text-align: center; /* Teks berada di tengah */
+    overflow: hidden; /* Hindari teks keluar */
+}
+
+.projects .project-item {
+    background-color: #111;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    transition: transform 0.3s;
+}
+
+.projects .project-item:hover {
+    transform: scale(1.05);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact form input, .contact form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    background-color: #111;
+    color: #00FFFF;
+}
+
+.contact form button {
+    background-color: #00FFFF;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+    background-color: #25b6ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header nav {
+        margin-top: 10px;
+    }
+    header nav a {
+        margin: 0 10px;
+    }
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .hero h2 {
+        font-size: 1.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .skills .skill-item {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        border: 2px solid #00FFFF;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        font-size: 1.1em;
+    }
+    
+    .skills .skill-item:hover {
+        background-color: #00FFFF;
+        color: #000;
+    }
+    
+    .skills .skill-item i {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+    .projects .project-item {
+        width: 90%;
+    }
+    .contact form input, .contact form textarea {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5em;
+    }
+    .hero h2 {
+        font-size: 1em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .about h2, .skills h2, .projects h2, .contact h2 {
+        font-size: 1.5em;
+    }
+    .contact form input, .contact form textarea {
+        width: 100%;
+    }
+}
+
+.project-img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00FFFF44;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-img:hover {
+    transform: scale(1.02);
+}
+
+.projects .project-item {
+    background-color: #111;
+    border: 2px solid #00FFFF55;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 15px;
+    width: 85%;
+    box-shadow: 0 0 15px #00FFFF33;
+}
+
+.projects .project-item h3 {
+    color: #00FFFF;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.projects .project-item p {
+    color: #ccc;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
