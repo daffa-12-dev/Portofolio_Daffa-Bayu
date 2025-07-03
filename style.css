@@ -87,8 +87,6 @@ nav a:hover {
 .profile-photo {
     width:250px;
     height: 250px;
-    border-radius: 50%;
-    border: 3px solid #00FFFF;
     object-fit: cover;
 }
 
@@ -185,7 +183,7 @@ nav a:hover {
 }
 
 .about {
-    padding: 150px 20px;
+    padding: 230px 20px;
     text-align: center;
 }
 
@@ -210,6 +208,26 @@ nav a:hover {
     text-align: center;
 }
 
+/* =========================
+   Skill Item Hover Glow
+   ========================= */
+.skills .skill-item:hover {
+  /* tetapkan warna latar agar kontras (opsional) */
+  background-color: rgba(0, 255, 255, 0.1);
+
+  /* ganti border menjadi lebih cerah */
+  border-color: #00FFFF;
+
+  /* tambahkan glow pada border */
+  box-shadow:
+    0 0 8px #00FFFF,     /* inner glow */
+    0 0 16px #00FFFF80,  /* medium glow */
+    0 0 24px #00FFFF40;  /* outer glow */
+
+  /* sedikit scale up untuk memberi kesan interaktif */
+  transform: scale(1.05);
+}
+
 .skills h2, .projects h2, .contact h2 {
     font-size: 3em;
     margin-bottom: 20px;
@@ -227,19 +245,11 @@ nav a:hover {
 }
 
 .skills .skill-item i {
-    font-size: 6em;
     color: #00FFFF;
 }
 
 .skills .skill-item:hover {
-    background-color: #00FFFF;
     color: #000;
-    color: #00FFFF;
-    text-shadow: 
-        0 0 10px #00FFFF,
-        0 0 20px #00FFFF,
-        0 0 40px #00FFFF,
-        0 0 80px #00FFFF;
     transform: scale(1.1);
 }
 
@@ -262,13 +272,6 @@ nav a:hover {
     visibility: hidden;
     z-index: 10;
     transition: opacity 0.3s, visibility 0.3s;
-}
-
-/* Show Tooltip on Hover */
-.skills .skill-item i:hover::after {
-    opacity: 1;
-    visibility: visible;
-    font-size:0.16em; /*Saat Menekan hover Tek tulisan menonjol*/
 }
 
 /* Atur ukuran tooltip agar tidak terlalu besar */
@@ -401,8 +404,8 @@ footer {
 .project-img {
     width: 100%;
     max-width: 700px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #00FFFF44;
+
+
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -542,32 +545,283 @@ a:hover, .button:hover, button:hover {
     transition: all 0.3s ease;
 }
 
-/* HTML - orange glow */
-.skills .skill-item i.fa-html5:hover {
-    color: #FF5722;
-    text-shadow: 0 0 10px #FF5722, 0 0 20px #FF7043, 0 0 40px #FF8A65;
+.certificates {
+    padding: 150px 20px;
+    text-align: center;
 }
 
-/* CSS - biru glow */
-.skills .skill-item i.fa-css3-alt:hover {
-    color: #2196F3;
-    text-shadow: 0 0 10px #2196F3, 0 0 20px #42A5F5, 0 0 40px #64B5F6;
+.certificates h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #00FFFF;
+    letter-spacing: 1px;
 }
 
-/* JavaScript - kuning glow */
-.skills .skill-item i.fa-js:hover {
-    color: #FFD600;
-    text-shadow: 0 0 10px #FFD600, 0 0 20px #FFEB3B, 0 0 40px #FFF176;
+.cert-desc {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 50px;
 }
 
-/* PHP - ungu glow */
-.skills .skill-item i.fa-php:hover {
-    color: #9C27B0;
-    text-shadow: 0 0 10px #9C27B0, 0 0 20px #BA68C8, 0 0 40px #E1BEE7;
+.certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* SQL - biru kehijauan glow */
-.skills .skill-item i.fa-database:hover {
-    color: #00BCD4;
-    text-shadow: 0 0 10px #00BCD4, 0 0 20px #4DD0E1, 0 0 40px #80DEEA;
+.certificate-card {
+    background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+    border: 1px solid #00ffff20;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.certificate-card:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 0 0 20px #00FFFF55;
+    transform: translateY(-5px);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+
+.certificate-card h3 {
+    color: #00FFFF;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.certificate-card p {
+    font-size: 0.95em;
+    color: #aaa;
+}
+
+.section-desc {
+    font-size: 1.2em;
+    color: #ccc;
+    margin: -0px auto 50px;
+    max-width: 800px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-fade-up,
+.scroll-fade-left,
+.scroll-zoom-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.scroll-fade-left {
+    transform: translateX(-30px);
+}
+
+.scroll-zoom-in {
+    transform: scale(0.8);
+}
+
+.scroll-fade-up.visible,
+.scroll-fade-left.visible,
+.scroll-zoom-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.contact {
+  padding: 150px 20px;
+  text-align: center;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background-color: #0a0a0a;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 280px;
+  box-shadow: 0 0 15px #00ffff22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #00ffff55;
+}
+
+.contact-card .icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.contact-card .phone {
+  color: #007bff;
+}
+.contact-card .email {
+  color: #a25bff;
+}
+.contact-card .location {
+  color: #00c566;
+}
+
+.contact-card h3 {
+  margin: 5px 0;
+  color: #ffffff;
+}
+
+.contact-card p {
+  color: #ccc;
+  font-size: 0.95em;
+}
+
+.contact-card a {
+  text-decoration: none;
+  color: #00ffff;
+  transition: color 0.3s;
+}
+
+.contact-card a:hover {
+  color: #25b6ff;
+}
+
+.hero-section {
+  background-color: #000;
+  padding: 180px 20px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  color: #fff;
+}
+
+.intro {
+  font-size: 1.1em;
+  color: #25b6ff;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #00ffff;
+  margin: 0 0 10px;
+}
+
+.role {
+  font-size: 1.5em;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.bio {
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00ffff;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #25b6ff;
+}
+
+.btn-outline {
+  border: 2px solid #00ffff;
+  color: #00ffff;
+}
+
+.btn-outline:hover {
+  background-color: #00ffff;
+  color: #000;
+}
+
+.hero-image {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+
+/* Tambahkan efek glowing gradasi di balik foto hero */
+.hero-image {
+  position: relative;
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.hero-image img.profile-img {
+  position: relative;
+  z-index: 1;
+  width: 450px;
+  border-radius: 20px;
+  object-fit: cover;
+
+}
+
+@keyframes rotateGlow {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+

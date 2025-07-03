@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web Developer</title>
+    <title>Portfolio Daffa Bayu</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Tambahkan FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            transition: all 0.3s ease;
+        }
+        .scroll-fade-up,
+        .scroll-fade-left,
+        .scroll-zoom-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            will-change: opacity, transform;
+        }
+        .scroll-fade-left {
+            transform: translateX(-30px);
+        }
+        .scroll-zoom-in {
+            transform: scale(0.9);
+        }
+        .visible {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,121 +40,153 @@
                 <a href="#home">Home</a>
                 <a href="#about">About Me</a>
                 <a href="#skills">Skills</a>
+                <a href="#certificates">Certificates</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
-    </header>    
+    </header>
 
-    <section id="home" class="hero">
-        <div class="profile-container">
-            <img src="img/profile1.jpg" alt="Profile Photo" class="profile-photo">
-            <div class="profile-text">
-            </div>
-        </div>
-    </section>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="welcome">Welcome to My Portofolio Website</h1>
-            <h2>Hi, I'm <span class="highlight">Daffa Bayu Faadihilah</span></h2>
-            <h3>Informatics Student | Web Developer</h3>
-            <p class="description">
-                Passionate about building clean, user-friendly, and responsive web applications.
-            </p>
-            <a href="#contact" class="button">Feel free to connect with me!</a>
-        </div>
-    </section>    
+<section id="home" class="hero-section scroll-fade-up" style="--delay: 0.3s">
+  <div class="hero-content-wrapper">
+    <div class="hero-text scroll-fade-left" style="--delay: 0.3s">
+      <p class="intro">Hello, I’m</p>
+      <h1 class="name">Daffa Bayu Faadihilah</h1>
+      <p class="role">Informatics Student & Front-End Developer</p>
+      <p class="bio">
+        Saya adalah mahasiswa yang berfokus pada pengembangan web modern, UI/UX design, dan teknologi digital. Saya senang membangun antarmuka yang bersih dan ramah pengguna.
+      </p>
+      <div class="hero-buttons scroll-fade-left" style="--delay: 0.3s">
+      <a href="https://drive.google.com/file/d/1wsaeqdikSUqB-0lZDa1VicXIjQNR0Eu_/view?usp=sharing" target="_blank" class="btn btn-primary">Download CV</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image scroll-fade-right" style="--delay: 0.4s">
+      <img src="img/profile6.png" alt="Daffa Bayu" class="profile-img" />
+    </div>
+  </div>
+</section>
 
     <section id="about" class="about">
-        <div class="about-box">
+        <div class="about-box scroll-fade-up">
             <h2>About Me</h2>
-            <p>
-                Saya adalah mahasiswa jurusan Pendidikan Teknologi Informasi yang memiliki ketertarikan di bidang web development, desain UI/UX, dan problem solving berbasis teknologi. Saya memiliki kemampuan dasar dalam HTML, CSS, JavaScript, dan PHP, serta senang mengubah ide kompleks menjadi antarmuka pengguna yang dinamis dan intuitif.
-            </p>
-            <p>
-                Selama perjalanan saya di dunia Informatika, saya telah mengerjakan beberapa proyek seperti website, sistem informasi, hingga aplikasi mini yang responsif dan user-friendly.
-            </p>
-            <p>
-                Saya aktif belajar framework dan tools baru serta menerapkan praktik terbaik dalam pengembangan frontend. Saya antusias untuk terlibat dalam tim kreatif dan proyek-proyek inovatif yang berdampak positif melalui teknologi.
-            </p>
+            <p>Saya adalah mahasiswa jurusan Pendidikan Teknologi Informasi yang memiliki ketertarikan di bidang web development, desain UI/UX, dan problem solving berbasis teknologi. Saya memiliki kemampuan dasar dalam HTML, CSS, JavaScript, dan PHP, serta senang mengubah ide kompleks menjadi antarmuka pengguna yang dinamis dan intuitif.</p>
+            <p>Selama perjalanan saya di dunia Informatika, saya telah mengerjakan beberapa proyek seperti website, sistem informasi, hingga aplikasi mini yang responsif dan user-friendly.</p>
+            <p>Saya aktif belajar framework dan tools baru serta menerapkan praktik terbaik dalam pengembangan frontend. Saya antusias untuk terlibat dalam tim kreatif dan proyek-proyek inovatif yang berdampak positif melalui teknologi.</p>
         </div>
     </section>
 
     <section id="skills" class="skills">
-        <h2>Skills</h2>
+        <h2 class="scroll-fade-up">Skills</h2>
+        <p class="section-desc scroll-fade-up">Berikut adalah keterampilan teknis yang saya kuasai dalam pengembangan web, pemrograman, dan desain UI/UX.</p>
         <div class="skills-row">
-        <div class="skill-item"><i class="fab fa-html5 html-icon" data-tooltip="HTML"></i></div>
-        <div class="skill-item"><i class="fab fa-css3-alt css-icon" data-tooltip="CSS"></i></div>
-        <div class="skill-item"><i class="fab fa-js js-icon" data-tooltip="JavaScript"></i></div>
-        <div class="skill-item"><i class="fab fa-php php-icon" data-tooltip="PHP"></i></div>
-        <div class="skill-item"><i class="fas fa-database sql-icon" data-tooltip="SQL"></i></div>
-    </div>
+            <div class="skill-item scroll-fade-left"><i class="fab fa-html5 html-icon"></i></div>
+            <div class="skill-item scroll-fade-left"><i class="fab fa-css3-alt css-icon"></i></div>
+            <div class="skill-item scroll-fade-left"><i class="fab fa-js js-icon"></i></div>
+            <div class="skill-item scroll-fade-left"><i class="fab fa-php php-icon"></i></div>
+            <div class="skill-item scroll-fade-left"><i class="fas fa-database sql-icon"></i></div>
+        </div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <h2 class="scroll-fade-up">Certificates</h2>
+        <p class="section-desc scroll-fade-up">Sertifikat berikut menunjukkan pelatihan yang telah saya ikuti untuk mendukung kompetensi profesional saya.</p>
+        <div class="certificate-grid">
+            <div class="certificate-card scroll-zoom-in">
+                <img src="img/1.png" alt="Sertifikat 1">
+                <h3>Peserta Seminar Nasional</h3>
+                <p>FESt Management x HIMATEKINS • 2024</p>
+            </div>
+            <div class="certificate-card scroll-zoom-in">
+                <img src="img/2.png" alt="Sertifikat 2">
+                <h3>Training Public Speaking</h3>
+                <p>FESt Management x HIMATEKINS • 2024</p>
+            </div>
+            <div class="certificate-card scroll-zoom-in">
+                <img src="img/3.png" alt="Sertifikat 3">
+                <h3>Pelatihan Entrepreneurship</h3>
+                <p>FESt Management x HIMATEKINS • 2024</p>
+            </div>
+            <div class="certificate-card scroll-zoom-in">
+                <img src="img/4.png" alt="Sertifikat 4">
+                <h3>FESt GOWORLD ASIA</h3>
+                <p>FESt Management x HIMATEKINS • 2024</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="projects">
-        <h2>Projects</h2>
+        <h2 class="scroll-fade-up">Projects</h2>
+        <p class="section-desc scroll-fade-up">Proyek-proyek berikut mencerminkan pengalaman saya dalam membangun solusi digital yang fungsional dan responsif.</p>
         <div class="project-grid">
-
-            <div class="project-card">
+            <div class="project-card scroll-zoom-in">
                 <img src="img/vapestore.png" alt="Phoenix Vapestore">
                 <h3>Phoenix Vapestore</h3>
                 <p>Aplikasi penjualan berbasis Visual Basic untuk kebutuhan retail.</p>
                 <div class="tech-stack">
-                    <span>VB</span>
-                    <span>MS Access</span>
+                    <span>VB</span><span>MS Access</span>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card scroll-zoom-in">
                 <img src="img/klinik.png" alt="Sistem Klinik Pratama">
                 <h3>Klinik Pratama</h3>
                 <p>Sistem informasi berbasis PHP & MySQL untuk manajemen klinik.</p>
                 <div class="tech-stack">
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                    <span>Bootstrap</span>
+                    <span>PHP</span><span>MySQL</span><span>Bootstrap</span>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card scroll-zoom-in">
                 <img src="img/zombieman.png" alt="Zombie vs Man Game">
                 <h3>Zombie vs Man Game</h3>
                 <p>Mini game grid berbasis PHP dan JavaScript.</p>
                 <div class="tech-stack">
-                    <span>PHP</span>
-                    <span>JavaScript</span>
+                    <span>PHP</span><span>JavaScript</span>
                 </div>
             </div>
-
-            <div class="project-card">
+            <div class="project-card scroll-zoom-in">
                 <img src="img/personal.png" alt="Personal Website">
                 <h3>Portfolio Website</h3>
                 <p>Website statis pribadi menggunakan HTML, CSS, dan JavaScript.</p>
                 <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JS</span>
+                    <span>HTML</span><span>CSS</span><span>JS</span>
                 </div>
             </div>
-
+            <div class="project-card scroll-zoom-in">
+            <img src="img/moneychange.png" alt="Money Change App">
+            <h3>Money Change - Currency Converter</h3>
+            <p>Aplikasi konversi mata uang berbasis Java GUI (NetBeans) dengan tema custom anime UI dan dukungan berbagai kurs asing.</p>
+            <div class="tech-stack">
+                <span>Java</span>
+                <span>NetBeans</span>
+                <span>GUI Swing</span>
+            </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:daffabayu011205@gmail.com">daffabayu011205@gmail.com</a></p>
-            <p>Domisili: Nganjuk, Jawa Timur</p>
-        </div>
+<section id="contact" class="contact scroll-fade-up">
+  <h2>Hubungi Saya</h2>
+  <p class="section-desc scroll-fade-up">Silakan hubungi saya melalui salah satu platform berikut:</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <i class="fas fa-phone-alt icon phone"></i>
+      <h3>Telepon</h3>
+      <p><a href="https://wa.me/6281230158120" target="_blank">+62 812-3015-8120</a></p>
+    </div>
 
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <div class="contact-card">
+      <i class="fas fa-envelope icon email"></i>
+      <h3>Email</h3>
+      <p><a href="mailto:daffabayu011205@gmail.com">daffabayu011205@gmail.com</a></p>
+    </div>
+
+    <div class="contact-card">
+      <i class="fas fa-map-marker-alt icon location"></i>
+      <h3>Alamat</h3>
+      <p>Wartudandang, Prambon, Nganjuk</p>
+    </div>
+  </div>
+</section>
 
     <footer>
         <div class="social-links">
@@ -140,8 +194,9 @@
             <a href="https://github.com/daffa-12-dev" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.instagram.com/daff.ex4/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2024 Daffa Bayu Faadihilah. All rights reserved.</p>
+        <p>&copy; 2025 Daffa Bayu Faadihilah. All rights reserved.</p>
     </footer>
+
     <div class="cursor-light"></div>
 
     <script>
@@ -150,6 +205,20 @@
             light.style.left = `${e.clientX}px`;
             light.style.top = `${e.clientY}px`;
         });
+
+        const scrollEls = document.querySelectorAll('.scroll-fade-up, .scroll-fade-left, .scroll-zoom-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible");
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        scrollEls.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>
