@@ -918,3 +918,47 @@ a:hover, .button:hover, button:hover {
     width: 280px;
   }
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  color: #00FFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 10px 20px #00FFFF44;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img.profile-img {
+    width: 250px;
+  }
+
+  header {
+    transition: top 0.3s ease;
+  }
+}

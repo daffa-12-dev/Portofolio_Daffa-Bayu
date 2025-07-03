@@ -6,22 +6,6 @@
     <title>Portfolio Daffa Bayu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <div class="header-container">
-    <div class="logo">
-      <i class="fas fa-code"></i> Daffa Bayu Faadihilah
-    </div>
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
-    <nav id="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#skills">Skills</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
 
     <style>
         * {
@@ -48,21 +32,24 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <i class="fas fa-code"></i> Daffa Bayu Faadihilah
-            </div>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#skills">Skills</a>
-                <a href="#certificates">Certificates</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <header id="main-header">
+  <div class="header-container">
+    <div class="logo">
+      <i class="fas fa-code"></i> Daffa Bayu Faadihilah
+    </div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <section id="home" class="hero-section scroll-fade-up" style="--delay: 0.3s">
   <div class="hero-content-wrapper">
@@ -205,95 +192,89 @@
   </div>
 </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://x.com/daff_byy" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/daffa-12-dev" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/daff.ex4/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>&copy; 2025 Daffa Bayu Faadihilah. All rights reserved.</p>
-    </footer>
+  <footer>
+    <div class="social-links">
+      <a href="https://x.com/daff_byy" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/daffa-12-dev" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/daff.ex4/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Daffa Bayu Faadihilah. All rights reserved.</p>
+  </footer>
 
-    <div class="cursor-light"></div>
+  <div class="cursor-light"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-    
-    <div class="hamburger" id="hamburger">
-  <i class="fas fa-bars"></i>
-</div>
-<div class="mobile-nav" id="mobileNav">
-  <a href="#home">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#skills">Skills</a>
-  <a href="#certificates">Certificates</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</div>
+  <script>
+    // Variabel utama hanya dideklarasikan sekali
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+    const mobileNav = document.getElementById("mobileNav");
+    const header = document.getElementById("main-header");
+    const light = document.querySelector(".cursor-light");
+    let lastScrollTop = 0;
 
-    <script>
-        const light = document.querySelector('.cursor-light');
-        document.addEventListener('mousemove', e => {
-            light.style.left = `${e.clientX}px`;
-            light.style.top = `${e.clientY}px`;
-        });
+    // Hamburger toggle
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      mobileNav.classList.toggle("active");
 
-        const scrollEls = document.querySelectorAll('.scroll-fade-up, .scroll-fade-left, .scroll-zoom-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                } else {
-                    entry.target.classList.remove("visible");
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        scrollEls.forEach(el => observer.observe(el));
-    </script>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
-
-  hamburger.addEventListener('click', () => {
-    mobileNav.classList.toggle('active');
-  });
-
-  // Auto close nav when clicking a link
-  document.querySelectorAll('.mobile-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
+      // Lock scroll jika menu aktif
+      document.body.style.overflow = mobileNav.classList.contains("active") ? "hidden" : "auto";
     });
-  });
-</script>
 
-<script>
-  const hamburger = document.getElementById("hamburger");
-  const navLinks = document.getElementById("nav-links");
+    // Tutup menu mobile saat klik link
+    document.querySelectorAll(".mobile-nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("active");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "auto";
+      });
+    });
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-  // Auto-hide header on scroll down, show on scroll up
-  let lastScrollTop = 0;
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Header auto-hide saat scroll
+    window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop) {
-      // Scroll down
-      header.style.top = "-100px";
-      navLinks.classList.remove("active");
+        // Scroll ke bawah
+        header.style.top = "-100px";
+        navLinks.classList.remove("active");
+        mobileNav.classList.remove("active");
+        document.body.style.overflow = "auto";
     } else {
-      // Scroll up
-      header.style.top = "0";
+        // Scroll ke atas
+        header.style.top = "0";
     }
 
     lastScrollTop = scrollTop;
-  });
-</script>
+    });
 
+    // Efek mouse
+    document.addEventListener("mousemove", e => {
+      light.style.left = `${e.clientX}px`;
+      light.style.top = `${e.clientY}px`;
+    });
+
+    // Efek animasi saat scroll
+    const scrollEls = document.querySelectorAll('.scroll-fade-up, .scroll-fade-left, .scroll-zoom-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    scrollEls.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
