@@ -199,6 +199,19 @@
 
     <div class="cursor-light"></div>
 
+    
+    <div class="hamburger" id="hamburger">
+  <i class="fas fa-bars"></i>
+</div>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#skills">Skills</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
+
     <script>
         const light = document.querySelector('.cursor-light');
         document.addEventListener('mousemove', e => {
@@ -220,5 +233,22 @@
         });
         scrollEls.forEach(el => observer.observe(el));
     </script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+
+  // Auto close nav when clicking a link
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>

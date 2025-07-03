@@ -825,3 +825,55 @@ a:hover, .button:hover, button:hover {
   }
 }
 
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 1.8em;
+  color: #00ffff;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background-color: #000;
+  box-shadow: -2px 0 10px #00ffff44;
+  flex-direction: column;
+  padding-top: 80px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.mobile-nav a {
+  color: #00ffff;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #00ffff33;
+  transition: background-color 0.2s;
+}
+
+.mobile-nav a:hover {
+  background-color: #00ffff11;
+}
+
+.mobile-nav.active {
+  right: 0;
+}
+
+/* RESPONSIVE - SHOW HAMBURGER ON SMALL DEVICES */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
