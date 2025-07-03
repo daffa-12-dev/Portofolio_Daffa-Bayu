@@ -877,3 +877,44 @@ a:hover, .button:hover, button:hover {
     display: block;
   }
 }
+
+/* Responsive Navbar */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  color: #00FFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 10px 20px #00FFFF44;
+    z-index: 999;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero-content-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image img.profile-img {
+    width: 280px;
+  }
+}

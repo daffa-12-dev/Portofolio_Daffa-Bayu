@@ -6,6 +6,23 @@
     <title>Portfolio Daffa Bayu</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <div class="header-container">
+    <div class="logo">
+      <i class="fas fa-code"></i> Daffa Bayu Faadihilah
+    </div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
     <style>
         * {
             transition: all 0.3s ease;
@@ -52,7 +69,7 @@
     <div class="hero-text scroll-fade-left" style="--delay: 0.3s">
       <p class="intro">Hello, I’m</p>
       <h1 class="name">Daffa Bayu Faadihilah</h1>
-      <p class="role">Informatics Student & Front-End Developer</p>
+      <p class="role">Informatics Student & Web Developer</p>
       <p class="bio">
         Saya adalah mahasiswa yang berfokus pada pengembangan web modern, UI/UX design, dan teknologi digital. Saya senang membangun antarmuka yang bersih dan ramah pengguna.
       </p>
@@ -247,6 +264,34 @@
     link.addEventListener('click', () => {
       mobileNav.classList.remove('active');
     });
+  });
+</script>
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Auto-hide header on scroll down, show on scroll up
+  let lastScrollTop = 0;
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scroll down
+      header.style.top = "-100px";
+      navLinks.classList.remove("active");
+    } else {
+      // Scroll up
+      header.style.top = "0";
+    }
+
+    lastScrollTop = scrollTop;
   });
 </script>
 
