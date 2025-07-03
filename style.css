@@ -234,6 +234,13 @@ nav a:hover {
 .skills .skill-item:hover {
     background-color: #00FFFF;
     color: #000;
+    color: #00FFFF;
+    text-shadow: 
+        0 0 10px #00FFFF,
+        0 0 20px #00FFFF,
+        0 0 40px #00FFFF,
+        0 0 80px #00FFFF;
+    transform: scale(1.1);
 }
 
 /* Tooltip Style */
@@ -424,4 +431,143 @@ footer {
     color: #ccc;
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    color: #00FFFF;
+}
+.contact-info a {
+    color: #25b6ff;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.project-card {
+    background-color: #111;
+    border: 1px solid #00FFFF33;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 0 12px #00FFFF22;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px #00FFFF44;
+}
+
+.project-card h3 {
+    color: #00FFFF;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #ccc;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    background-color: #00FFFF22;
+    border: 1px solid #00FFFF66;
+    color: #00FFFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+/* TRANSISI HALUS UNTUK SEMUA ELEMEN */
+* {
+    transition: all 0.3s ease;
+}
+
+/* EFEK HOVER GLOW UNTUK TOMBOL & LINK */
+a:hover, .button:hover, button:hover {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF55;
+    transform: scale(1.05);
+}
+
+/* EFEK GLOW SAAT KURSOR DI ATAS KOTAK PROJECT */
+.project-card:hover {
+    box-shadow: 0 0 20px #00FFFF88, 0 0 30px #00FFFF44;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card:hover,
+.button:hover {
+    border: 1px solid #00FFFF;
+    box-shadow: 0 0 15px #00FFFFAA, 0 0 25px #00FFFF66;
+}
+
+/* Base Style */
+.skills .skill-item i {
+    font-size: 6em;
+    transition: all 0.3s ease;
+}
+
+/* HTML - orange glow */
+.skills .skill-item i.fa-html5:hover {
+    color: #FF5722;
+    text-shadow: 0 0 10px #FF5722, 0 0 20px #FF7043, 0 0 40px #FF8A65;
+}
+
+/* CSS - biru glow */
+.skills .skill-item i.fa-css3-alt:hover {
+    color: #2196F3;
+    text-shadow: 0 0 10px #2196F3, 0 0 20px #42A5F5, 0 0 40px #64B5F6;
+}
+
+/* JavaScript - kuning glow */
+.skills .skill-item i.fa-js:hover {
+    color: #FFD600;
+    text-shadow: 0 0 10px #FFD600, 0 0 20px #FFEB3B, 0 0 40px #FFF176;
+}
+
+/* PHP - ungu glow */
+.skills .skill-item i.fa-php:hover {
+    color: #9C27B0;
+    text-shadow: 0 0 10px #9C27B0, 0 0 20px #BA68C8, 0 0 40px #E1BEE7;
+}
+
+/* SQL - biru kehijauan glow */
+.skills .skill-item i.fa-database:hover {
+    color: #00BCD4;
+    text-shadow: 0 0 10px #00BCD4, 0 0 20px #4DD0E1, 0 0 40px #80DEEA;
 }

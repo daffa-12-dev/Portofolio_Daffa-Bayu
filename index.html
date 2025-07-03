@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex Trader Portfolio</title>
+    <title>Portfolio Web Developer</title>
     <link rel="stylesheet" href="style.css">
     <!-- Tambahkan FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -12,7 +12,7 @@
     <header>
         <div class="header-container">
             <div class="logo">
-                <i class="fas fa-chart-line"></i> Daffa Bayu Faadihilah
+                <i class="fas fa-code"></i> Daffa Bayu Faadihilah
             </div>
             <nav>
                 <a href="#home">Home</a>
@@ -26,7 +26,7 @@
 
     <section id="home" class="hero">
         <div class="profile-container">
-            <img src="img/profile.jpg" alt="Profile Photo" class="profile-photo">
+            <img src="img/profile1.jpg" alt="Profile Photo" class="profile-photo">
             <div class="profile-text">
             </div>
         </div>
@@ -48,13 +48,13 @@
         <div class="about-box">
             <h2>About Me</h2>
             <p>
-                I am an Informatics student with a passion for web development, UI/UX design, and problem solving through technology. With a strong foundation in HTML, CSS, JavaScript, and PHP, I enjoy turning complex problems into intuitive and dynamic user interfaces.
+                Saya adalah mahasiswa jurusan Pendidikan Teknologi Informasi yang memiliki ketertarikan di bidang web development, desain UI/UX, dan problem solving berbasis teknologi. Saya memiliki kemampuan dasar dalam HTML, CSS, JavaScript, dan PHP, serta senang mengubah ide kompleks menjadi antarmuka pengguna yang dinamis dan intuitif.
             </p>
             <p>
-                My journey in Informatics has included building websites, designing responsive interfaces, and collaborating on projects that apply real-world logic to digital solutions.
+                Selama perjalanan saya di dunia Informatika, saya telah mengerjakan beberapa proyek seperti website, sistem informasi, hingga aplikasi mini yang responsif dan user-friendly.
             </p>
             <p>
-                I continuously explore new frameworks, libraries, and best practices to improve my frontend development skills. I am excited to contribute to innovative teams and projects that bring positive impact through technology.
+                Saya aktif belajar framework dan tools baru serta menerapkan praktik terbaik dalam pengembangan frontend. Saya antusias untuk terlibat dalam tim kreatif dan proyek-proyek inovatif yang berdampak positif melalui teknologi.
             </p>
         </div>
     </section>
@@ -62,51 +62,70 @@
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <div class="skills-row">
-            <div class="skill-item">
-                <i class="fab fa-html5" data-tooltip="HTML"></i>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-css3-alt" data-tooltip="CSS"></i>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-js" data-tooltip="JavaScript"></i>
-            </div>
-            <div class="skill-item">
-                <i class="fab fa-php" data-tooltip="PHP"></i>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-database" data-tooltip="SQL"></i>
-            </div>
-        </div>
+        <div class="skill-item"><i class="fab fa-html5 html-icon" data-tooltip="HTML"></i></div>
+        <div class="skill-item"><i class="fab fa-css3-alt css-icon" data-tooltip="CSS"></i></div>
+        <div class="skill-item"><i class="fab fa-js js-icon" data-tooltip="JavaScript"></i></div>
+        <div class="skill-item"><i class="fab fa-php php-icon" data-tooltip="PHP"></i></div>
+        <div class="skill-item"><i class="fas fa-database sql-icon" data-tooltip="SQL"></i></div>
+    </div>
     </section>
 
     <section id="projects" class="projects">
-    <h2>Projects</h2>
-        <div class="project-item">
-            <img src="img/vapestore.png" alt="Phoenix Vapestore" class="project-img">
-            <h3>Phoenix Vapestore</h3>
-            <p>Aplikasi penjualan berbasis Visual Basic di Microsoft Visual Studio. Fitur: Master Produk, Transaksi, Laporan Penjualan.</p>
-        </div>
-        <div class="project-item">
-            <img src="img/klinik.png" alt="Sistem Klinik Pratama" class="project-img">
-            <h3>Sistem Informasi Klinik Pratama</h3>
-            <p>Dibuat menggunakan PHP & MySQL. Fitur lengkap: reservasi pasien, manajemen obat, dokter, perawat, pembayaran dan laporan transaksi.</p>
-        </div>
-        <div class="project-item">
-            <img src="img/zombieman.png" alt="Zombie vs Man Game" class="project-img">
-            <h3>Zombie vs Man Game</h3>
-            <p>Mini game berbasis grid dibuat menggunakan PHP dan JavaScript. Menampilkan pemain, zombie, dan sistem skor berbasis waktu.</p>
-        </div>
-        <div class="project-item">
-            <img src="img/personal.png" alt="Personal Website" class="project-img">
-            <h3>Personal Portfolio Website</h3>
-            <p>Website pribadi statis menggunakan HTML, CSS, dan JavaScript. Menampilkan profil, skill, dan portofolio proyek dengan gaya dark mode.</p>
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <img src="img/vapestore.png" alt="Phoenix Vapestore">
+                <h3>Phoenix Vapestore</h3>
+                <p>Aplikasi penjualan berbasis Visual Basic untuk kebutuhan retail.</p>
+                <div class="tech-stack">
+                    <span>VB</span>
+                    <span>MS Access</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/klinik.png" alt="Sistem Klinik Pratama">
+                <h3>Klinik Pratama</h3>
+                <p>Sistem informasi berbasis PHP & MySQL untuk manajemen klinik.</p>
+                <div class="tech-stack">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/zombieman.png" alt="Zombie vs Man Game">
+                <h3>Zombie vs Man Game</h3>
+                <p>Mini game grid berbasis PHP dan JavaScript.</p>
+                <div class="tech-stack">
+                    <span>PHP</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="img/personal.png" alt="Personal Website">
+                <h3>Portfolio Website</h3>
+                <p>Website statis pribadi menggunakan HTML, CSS, dan JavaScript.</p>
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                </div>
+            </div>
+
         </div>
     </section>
 
-
     <section id="contact" class="contact">
         <h2>Contact</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:daffabayu011205@gmail.com">daffabayu011205@gmail.com</a></p>
+            <p>Domisili: Nganjuk, Jawa Timur</p>
+        </div>
+
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
@@ -117,12 +136,20 @@
 
     <footer>
         <div class="social-links">
-            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/daff_byy" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/daffa-12-dev" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/daff.ex4/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
         <p>&copy; 2024 Daffa Bayu Faadihilah. All rights reserved.</p>
     </footer>
+    <div class="cursor-light"></div>
+
+    <script>
+        const light = document.querySelector('.cursor-light');
+        document.addEventListener('mousemove', e => {
+            light.style.left = `${e.clientX}px`;
+            light.style.top = `${e.clientY}px`;
+        });
+    </script>
 </body>
 </html>
